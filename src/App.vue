@@ -36,6 +36,8 @@ watch(coords, (newCoords) => {
   }
 })
 
+console.log(weather.current.icon_num);
+
 onMounted(() => {
   const body = document.querySelector("body");
   switch(weather.current.icon_num) {
