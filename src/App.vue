@@ -36,7 +36,7 @@ watch(coords, (newCoords) => {
   }
 })
 
-const body = document.querySelector("body");
+/*const body = document.querySelector("body");
 
 switch(weather.current.icon_num) {
   case 3 || 4 || 5 || 6 || 8 || 27 || 28 || 29 || 30 || 31:
@@ -53,7 +53,7 @@ switch(weather.current.icon_num) {
     break;
   case 2 || 26:
     body.style.backgroundImage = "url('img/sunny.jpg')";  
- }
+ }*/
 
 
 </script>
