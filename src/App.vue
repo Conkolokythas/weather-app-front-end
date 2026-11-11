@@ -54,7 +54,7 @@ watch(coords, (newCoords) => {
     <div class="w-d">
 
       <div class="w-img" >
-        <div class="w-icon" v-bind:style="{ 'background-image': 'url(public/weather_icons/set01/big/'+ weather.current.icon_num +'.png)', 'background-size': 'cover','background-repeat': 'no-repeat' }"></div>
+        <div class="w-icon" v-bind:style="{ 'background-image': 'url(weather_icons/set01/big/'+ weather.current.icon_num +'.png)', 'background-size': 'cover','background-repeat': 'no-repeat' }"></div>
       </div>
 
 
@@ -103,7 +103,7 @@ watch(coords, (newCoords) => {
       <div class="l-info">
         <div class="w-hourly" v-for="hour in weather.hourly.data">
           <div>
-            <img :src="`public/weather_icons/set01/medium/${hour.icon}.png`" alt="">
+            <img :src="`weather_icons/set01/medium/${hour.icon}.png`" alt="">
           </div>
           <div>
             {{ hour.date }} 
