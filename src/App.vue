@@ -19,7 +19,7 @@ watch(coords, (newCoords) => {
     console.log("Latitude:", newCoords.latitude)
     console.log("Longitude:", newCoords.longitude)
 
-    axios.get('http://localhost:3000/', {
+    axios.get('https://wappbend.netlify.app/', {
     params: {
       lat: newCoords.latitude,
       long: newCoords.longitude
