@@ -28,6 +28,7 @@ watch(coords, (newCoords) => {
   .then(response => {
      weather.value = response.data;
      console.log(weather.value);
+     console.log(weather.current.icon_num.value);
 
     switch(weather.current.icon_num) {
         case 3 || 4 || 5 || 6 || 8 || 27 || 28 || 29 || 30 || 31:
@@ -46,7 +47,6 @@ watch(coords, (newCoords) => {
           document.body.style.backgroundImage = "url('img/sunny.jpg')";
       }
 
-     
 
   } )
   .catch(function (error) {
