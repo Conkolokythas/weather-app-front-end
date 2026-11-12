@@ -29,7 +29,7 @@ watch(coords, (newCoords) => {
      weather.value = response.data;
      console.log(weather.value);
 
-    let num = Object.keys(weather.value[0]);
+    /*let num = Object.keys(weather.value[0]);
     console.log(Object.keys(weather.value[0]));
     
 
@@ -48,7 +48,7 @@ watch(coords, (newCoords) => {
           break;
         case 2 || 26:
           document.body.style.backgroundImage = "url('img/sunny.jpg')";
-      }
+      }*/
 
 
   } )
@@ -58,6 +58,8 @@ watch(coords, (newCoords) => {
 
   }
 })
+
+console.log(weather);
 
 </script>
 
