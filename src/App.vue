@@ -59,7 +59,8 @@ watch(coords, (newCoords) => {
   }
 })
 
-console.log(weather);
+console.log(weather.timezone);
+console.log("fffffffffffff");
 
 </script>
 
