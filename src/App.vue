@@ -29,7 +29,9 @@ watch(coords, (newCoords) => {
      weather.value = response.data;
      console.log(weather.value);
 
-    let num = JSON.parse(JSON.stringify(weather));
+    let num = Object.keys(weather.data[0]);
+    console.log(Object.keys(weather.data[0]));
+    
 
     switch(num.current.icon_num) {
         case 3 || 4 || 5 || 6 || 8 || 27 || 28 || 29 || 30 || 31:
