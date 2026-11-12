@@ -9,11 +9,13 @@ app.mount('#app')
 
 
 
- onMounted(() => {
+onMounted(() => {
+console.log("app is mounted");
 
-  const body = document.querySelector("body");
-  const num = document.querySelector("#icon").getAttribute("data-num");
-    console.log("Variables being set");
+const body = document.querySelector("body");
+const num = document.querySelector("#icon").getAttribute("data-num");
+console.log("Variables being set");
+
   switch(num) {
   case 3 || 4 || 5 || 6 || 8 || 27 || 28 || 29 || 30 || 31:
     body.style.backgroundImage = "url('img/sunny-clouds.jpg')";
