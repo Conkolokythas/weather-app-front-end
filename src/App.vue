@@ -28,6 +28,7 @@ watch(coords, (newCoords) => {
   .then(response => {
      weather.value = response.data;
      console.log(weather.value);
+     document.body.style("background-color", "red");
 
   } )
   .catch(function (error) {
