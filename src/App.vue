@@ -53,7 +53,7 @@ watch(coords, (newCoords) => {
     <div class="w-d">
 
       <div class="w-img" >
-        <div id="icon" class="w-icon" v-bind:style="{ 'background-image': 'url(weather_icons/set01/big/'+ weather.current.icon_num +'.png)', 'background-size': 'cover','background-repeat': 'no-repeat' }" data-num="weather.current.icon_num"></div>
+        <div id="icon" class="w-icon" v-bind:style="{ 'background-image': 'url(weather_icons/set01/big/'+ weather.current.icon_num +'.png)', 'background-size': 'cover','background-repeat': 'no-repeat' }" v-bind:data-num="`${weather.current.icon_num}`"></div>
       </div>
 
 
