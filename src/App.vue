@@ -130,7 +130,7 @@ console.log(weather.value.current.icon_num);
             <img :src="`weather_icons/set01/medium/${hour.icon}.png`" alt="">
           </div>
           <div>
-            {{substr(hour.date.length - 8)}} 
+            {{hour.date}} 
         </div>
         <div>
           <span>{{ hour.temperature }} °C</span>
