@@ -60,7 +60,6 @@ watch(coords, (newCoords) => {
   }
 })
 
-console.log(weather.value.current.icon_num);
 
 </script>
 
