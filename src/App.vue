@@ -28,11 +28,9 @@ watch(coords, (newCoords) => {
   .then(response => {
      weather.value = response.data;
      console.log(weather.value);
+     console.log(weather.value[1]);
 
-    /*let num = Object.keys(weather.value[0]);
-    console.log(Object.keys(weather.value[0]));
-    
-
+    /*
     switch(num.current.icon_num) {
         case 3 || 4 || 5 || 6 || 8 || 27 || 28 || 29 || 30 || 31:
           document.body.style.backgroundImage = "url('img/sunny-clouds.jpg')";
@@ -48,7 +46,8 @@ watch(coords, (newCoords) => {
           break;
         case 2 || 26:
           document.body.style.backgroundImage = "url('img/sunny.jpg')";
-      }*/
+      }
+    */
 
 
   } )
@@ -59,8 +58,6 @@ watch(coords, (newCoords) => {
   }
 })
 
-console.log(weather.timezone);
-console.log("fffffffffffff");
 
 </script>
 
