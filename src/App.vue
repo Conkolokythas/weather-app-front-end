@@ -3,6 +3,7 @@ import { useGeolocation } from '@vueuse/core';
 import { ref, onMounted  } from 'vue';
 import { watch } from 'vue';
 import axios from 'axios';
+import AOS from "aos";
 
 const sunnyClouds = [3, 4, 5, 6, 8, 27, 28, 29, 30, 31];
 const rain = [7, 10, 11, 12, 13, 32];
@@ -48,7 +49,7 @@ watch(coords, (newCoords) => {
       document.body.style.backgroundImage = "url('img/sunny.jpg')";
      } else { 
       document.body.style.background = "#2a7b9b";
-      console.log("Something's wrong with icon num")
+      console.log("Something's wrong with icon num");
      }
 
   } )
@@ -128,7 +129,7 @@ watch(coords, (newCoords) => {
             <img :src="`weather_icons/set01/medium/${hour.icon}.png`" alt="">
           </div>
           <div>
-            {{ hour.date }} 
+            {{substr(hour.date.length - 8)}} 
         </div>
         <div>
           <span>{{ hour.temperature }} °C</span>
