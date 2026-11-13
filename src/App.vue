@@ -3,7 +3,6 @@ import { useGeolocation } from '@vueuse/core';
 import { ref, onMounted  } from 'vue';
 import { watch } from 'vue';
 import axios from 'axios';
-import AOS from "aos";
 
 const sunnyClouds = [3, 4, 5, 6, 8, 27, 28, 29, 30, 31];
 const rain = [7, 10, 11, 12, 13, 32];
