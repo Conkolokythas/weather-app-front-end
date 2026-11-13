@@ -28,7 +28,7 @@ watch(coords, (newCoords) => {
   .then(response => {
      weather.value = response.data;
      console.log(weather.value);
-     console.log(response.json());
+     console.log(response.data.json());
 
     /*
     switch(num.current.icon_num) {
