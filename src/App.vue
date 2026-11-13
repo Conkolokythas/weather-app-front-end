@@ -28,6 +28,7 @@ watch(coords, (newCoords) => {
   .then(response => {
      weather.value = response.data;
      console.log(weather.value);
+     console.log(weather.value.current.icon_num);
 
     /*
     switch(num.current.icon_num) {
@@ -61,8 +62,6 @@ watch(coords, (newCoords) => {
 </script>
 
 <template v-if="weather" data-aos="fade-up">
-
-{{ weather }}
 
   <div class="container">
     <div class="title">
