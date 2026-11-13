@@ -28,26 +28,24 @@ watch(coords, (newCoords) => {
   .then(response => {
      weather.value = response.data;
      console.log(weather.value);
-     console.log(weather.value.current.icon_num);
-
-    /*
-    switch(num.current.icon_num) {
-        case 3 || 4 || 5 || 6 || 8 || 27 || 28 || 29 || 30 || 31:
-          document.body.style.backgroundImage = "url('img/sunny-clouds.jpg')";
-          break;
-        case 7 || 10 || 11 || 12 || 13 || 32: 
-          document.body.style.backgroundImage = "url('img/cloudy-rain.jpg')";
-          break;
-        case 16 || 17 || 18 || 19 || 20 || 21 || 22 || 23 || 24 || 25 || 34 || 35 || 36:
-          document.body.style.backgroundImage = "url('img/snow.jpg')";
-          break;
-        case 14 || 15 || 33:
-          document.body.style.backgroundImage = "url('img/thunder.jpg')";
-          break;
-        case 2 || 26:
-          document.body.style.backgroundImage = "url('img/sunny.jpg')";
-      }
-    */
+     let num = weather.value.current.icon_num;
+    
+      switch(num) {
+          case 3 || 4 || 5 || 6 || 8 || 27 || 28 || 29 || 30 || 31:
+            document.body.style.backgroundImage = "url('img/sunny-clouds.jpg')";
+            break;
+          case 7 || 10 || 11 || 12 || 13 || 32: 
+            document.body.style.backgroundImage = "url('img/cloudy-rain.jpg')";
+            break;
+          case 16 || 17 || 18 || 19 || 20 || 21 || 22 || 23 || 24 || 25 || 34 || 35 || 36:
+            document.body.style.backgroundImage = "url('img/snow.jpg')";
+            break;
+          case 14 || 15 || 33:
+            document.body.style.backgroundImage = "url('img/thunder.jpg')";
+            break;
+          case 2 || 26:
+            document.body.style.backgroundImage = "url('img/sunny.jpg')";
+        }
 
 
   } )
