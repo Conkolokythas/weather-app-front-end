@@ -135,9 +135,6 @@ watch(coords, (newCoords) => {
 
 <style scoped>
 
-h1, h2, h3{
-  color: whitesmoke;
-}
 .courent-weather{
   width: 100%;
 }
@@ -155,7 +152,7 @@ h1, h2, h3{
   text-align: center;
 }
 
-.w-temperature {
+h1, h2, h3, .w-temperature, .w-slide{
   color: #e9e9e9
 }
 
