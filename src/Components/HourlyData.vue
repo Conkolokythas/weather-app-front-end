@@ -6,14 +6,13 @@ for(let i =0; i < props.hData.length; i++){
   let hourlyDate = props.hData[i].date;
   let jsDate = new Date(hourlyDate);
   let fixedDate = jsDate.getDay();
-  props.hData[0].date = fixedDate;
+  props.hData[i].date = fixedDate;
 }
 
 
 </script>
 
 <template>
-  <p>{{ weekDays[fixedDate] }}</p>
 
      <div class="w-slide">
       <div class="l-info">
