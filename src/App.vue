@@ -125,7 +125,7 @@ watch(coords, (newCoords) => {
     </div>
 </div>
 
-  <HourlyData hData = "hallo" ></HourlyData>
+  <HourlyData v-bind:hData = "weather.hourly.data" />
 
    <div class="w-slide">
       <div class="l-info">
