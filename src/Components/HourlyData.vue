@@ -7,7 +7,7 @@ for(let i =0; i < props.hData.length; i++){
   let jsDate = new Date(hourlyDate);
   let fixedDate = jsDate.getDay();
   let hour = hourlyDate.substr(11, 5);
-  props.hData[i].date = weekDays[fixedDate] +  hour;
+  props.hData[i].date = weekDays[fixedDate] + '\n' + hour;
 }
 
 </script>
