@@ -3,6 +3,7 @@ import { useGeolocation } from '@vueuse/core';
 import { ref, onMounted  } from 'vue';
 import { watch } from 'vue';
 import axios from 'axios';
+import HourlyData from 'Components/HourlyData.vue';
 import AOS from "aos";
 
 const sunnyClouds = [3, 4, 5, 6, 8, 27, 28, 29, 30, 31];
@@ -18,7 +19,9 @@ onMounted(() => {
 
 const { coords } = useGeolocation()
 const weather = ref(null);
+const wDate = ref(null);
 
+/*weather.hourly.data.date*/ 
 
 watch(coords, (newCoords) => {
   if (newCoords.latitude && newCoords.longitude) {
@@ -122,6 +125,8 @@ watch(coords, (newCoords) => {
     </div>
 </div>
 
+  <HourlyData hData = weather.hourly.data />
+
    <div class="w-slide">
       <div class="l-info">
         <div class="w-hourly" v-for="hour in weather.hourly.data">
@@ -130,7 +135,7 @@ watch(coords, (newCoords) => {
           </div>
           <div>
             {{hour.date}} 
-        </div>
+          </div>
         <div>
           <span>{{ hour.temperature }} °C</span>
         </div>
