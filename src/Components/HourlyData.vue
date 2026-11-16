@@ -5,5 +5,5 @@ console.log(props.hData);
 </script>
 
 <template>
-  <p>{{ props.hData }}</p>
+  <p>{{ props.hData[0].date }}</p>
 </template>
