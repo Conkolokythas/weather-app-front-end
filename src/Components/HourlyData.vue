@@ -6,9 +6,9 @@ for(let i =0; i < props.hData.length; i++){
   let hourlyDate = props.hData[i].date;
   let jsDate = new Date(hourlyDate);
   let fixedDate = jsDate.getDay();
-  props.hData[i].date = fixedDate;
+  let hour = hourlyDate.substr(11, 5);
+  props.hData[i].date = weekDays[fixedDate] + "<br>" + hour;
 }
-
 
 </script>
 
@@ -30,3 +30,46 @@ for(let i =0; i < props.hData.length; i++){
     </div>
   </div>
 </template>
+
+<style scoped>
+
+.l-info{
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  font-size: 14px;
+  font-weight: bold;
+
+  width: 100%;
+  height: fit-content;
+  white-space: nowrap;    
+  overflow: hidden;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-color: rgba(255, 255, 255, 0.719) rgba(249, 249, 249, 0);
+  scrollbar-width: thin;
+}
+
+.l-info div {
+  width: 100%;
+  padding-left: 1em;
+}
+
+@media (max-width: 774px) {
+.l-info{
+  width: 100%;
+  height: fit-content;
+  white-space: nowrap;    
+  overflow: hidden;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.l-info div {
+  padding: 0 1em 0 1em;
+}
+}
+
+</style>

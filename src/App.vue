@@ -125,23 +125,8 @@ watch(coords, (newCoords) => {
     </div>
 </div>
 
-  <HourlyData v-bind:hData = "weather.hourly.data" />
+<HourlyData v-bind:hData = "weather.hourly.data" />
 
-   <div class="w-slide">
-      <div class="l-info">
-        <div class="w-hourly" v-for="hour in weather.hourly.data">
-          <div>
-            <img :src="`weather_icons/set01/medium/${hour.icon}.png`" alt="">
-          </div>
-          <div>
-            {{hour.date}} 
-          </div>
-        <div>
-          <span>{{ hour.temperature }} °C</span>
-        </div>
-      </div>
-    </div>
-  </div>
   
   </div>
   </div>
@@ -170,7 +155,7 @@ h1, h2, h3{
   text-align: center;
 }
 
-.w-temperature, .w-slide {
+.w-temperature {
   color: #e9e9e9
 }
 
@@ -197,28 +182,6 @@ h1, h2, h3{
   flex-grow: 1;
 }
 
-.l-info{
-  display: flex;
-  flex-direction: row;
-  align-items: start;
-  font-size: 14px;
-  font-weight: bold;
-
-  width: 100%;
-  height: fit-content;
-  white-space: nowrap;    
-  overflow: hidden;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-color: rgba(255, 255, 255, 0.719) rgba(249, 249, 249, 0);
-  scrollbar-width: thin;
-}
-
-.l-info div {
-  width: 100%;
-  padding-left: 1em;
-}
 
 .w-description{
   flex-grow: 2;
@@ -254,18 +217,6 @@ h1, h2, h3{
   margin-bottom: 2em;
 }
 
-.l-info{
-  width: 100%;
-  height: fit-content;
-  white-space: nowrap;    
-  overflow: hidden;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-}
 
-.l-info div {
-  padding: 0 1em 0 1em;
-}
 }
 </style>
