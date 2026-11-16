@@ -1,11 +1,9 @@
 <script setup>
-import { ref } from 'vue'
-defineProps(['hData']);
-console.log(hData);
+const props = defineProps(['hData']);
+console.log(props.hData);
 
-const count = ref(0)
 </script>
 
 <template>
-  <p>{{ hData }}</p>
+  <p>{{ props.hData }}</p>
 </template>
