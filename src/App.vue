@@ -58,7 +58,7 @@ watch(coords, (newCoords) => {
   })
 
   }
-})
+}, { once: true })
 
 
 </script>
