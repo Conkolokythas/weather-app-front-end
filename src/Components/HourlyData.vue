@@ -1,9 +1,12 @@
 <script setup>
 const props = defineProps(['hData']);
-console.log(props.hData);
+let hourlyDate = props.hData[0].date;
 
+let year = hourlyDate.substr(0, 1, 2, 3);
+let month = hourlyDate.substr(5, 6);
+let day = hourlyDate.substr(8, 9);
 </script>
 
 <template>
-  <p>{{ props.hData[0].date }}</p>
+  <p>{{ year }} - {{ month }} - {{ day }}</p>
 </template>
