@@ -19,14 +19,11 @@ onMounted(() => {
 
 const { coords } = useGeolocation()
 const weather = ref(null);
-const wDate = ref(null);
 
 /*weather.hourly.data.date*/ 
 
 watch(coords, (newCoords) => {
   if (newCoords.latitude && newCoords.longitude) {
-    console.log("Latitude:", newCoords.latitude)
-    console.log("Longitude:", newCoords.longitude)
 
     axios.get('https://wappbend.netlify.app/', {
     params: {
