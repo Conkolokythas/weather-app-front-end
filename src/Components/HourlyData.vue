@@ -7,5 +7,5 @@ const count = ref(0)
 </script>
 
 <template>
-  <p>hi</p>
+  <p>{{ hData }}</p>
 </template>

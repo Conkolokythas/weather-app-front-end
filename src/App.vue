@@ -125,7 +125,7 @@ watch(coords, (newCoords) => {
     </div>
 </div>
 
-  <HourlyData :hData = weather.hourly.data />
+  <HourlyData hData = 'hallo' />
 
    <div class="w-slide">
       <div class="l-info">
