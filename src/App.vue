@@ -3,7 +3,7 @@ import { useGeolocation } from '@vueuse/core';
 import { ref, onMounted  } from 'vue';
 import { watch } from 'vue';
 import axios from 'axios';
-import HourlyData from 'Components/HourlyData.vue';
+import HourlyData from './Components/HourlyData.vue';
 import AOS from "aos";
 
 const sunnyClouds = [3, 4, 5, 6, 8, 27, 28, 29, 30, 31];
