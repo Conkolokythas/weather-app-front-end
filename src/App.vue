@@ -62,7 +62,7 @@ watch(coords, (newCoords) => {
 
 </script>
 
-<template v-if="weather" data-aos="fade-up">
+<template v-if="weather">
 
   <div class="container">
     <div class="title">
@@ -73,7 +73,7 @@ watch(coords, (newCoords) => {
 
   <div class="courent-weather">
 
-    <div class="w-d" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+    <div class="w-d" data-aos="fade-down">
 
       <div class="w-img" >
         <div id="icon" class="w-icon" v-bind:style="{ 'background-image': 'url(weather_icons/set01/big/'+ weather.current.icon_num +'.png)', 'background-size': 'cover','background-repeat': 'no-repeat' }" v-bind:data-num="`${weather.current.icon_num}`"></div>
