@@ -16,9 +16,9 @@ for(let i =0; i < props.hData.length; i++){
 
      <div class="w-slide">
       <div class="l-info">
-        <div class="w-hourly" v-for="hour in props.hData">
+        <div class="w-hourly" v-for="hour in props.hData" :key="hour.id">
           <div>
-            <img :src="`weather_icons/set01/medium/${hour.icon}.png`" alt="">
+            <img :src="`weather_icons/set01/medium/${hour.icon}.png`" :alt="hour.summary" :title="hour.summary">
           </div>
           <div>
             {{hour.date}} 
